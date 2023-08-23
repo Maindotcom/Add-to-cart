@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add to Cart</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!--Nav brand-->
+    <nav class="navBar">
+        <div class="brandName">
+            Add to Cart
+        </div>
+        <div class="emptyNav"></div>
+    </nav>
+    <!--End Nav brand-->
+
+    <!--Product Container-->
+    <section class="productContainer">
+        <div class="productImg">
+            <img class="bookImg" src="images/book.jpg" alt="not found">
+        </div>
+
+        <div class="bookDetails">
+            <h2 class="bookName">
+                Harry potter <br> and the sorcerer's stone.
+            </h2>
+            <p class="bookPrice"></p>
+            <p class="bookReview">Review: <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i><i
+                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+            </p>
+            <div class="quantity-buttons">
+                <span class="qtyDecrease">
+                    <button class="qtyDecrease-btn" onclick="qtyDecrease()" style="outline: none;">-</button>
+                </span>
+                <span class="Qty">
+                    <button class="qty-btn" style="outline: none;"></button>
+                </span>
+                <span class="qtyIncrease">
+                    <button class="qtyIncrease-btn" onclick="qtyIecrease()" style="outline: none;">+</button>
+                </span>
+            </div>
+            <button class="purchase-btn" onclick="purchase()"><a href="#orderrDetails"
+                    style="text-decoration: none;color: white; font-weight: 600;">Purchase</a></button>
+        </div>
+    </section>
+    <!--End Product Container-->
+
+    <!--About book-->
+    <section class="aboutBook">
+        <div class="bookDescriptionHeading">
+            <h2>Book Description :</h2>
+            <p class="bookDescription">
+                "Harry Potter and the Sorcerer's Stone" follows the extraordinary journey of Harry Potter, a young
+                orphan who discovers he is a wizard on his eleventh birthday. He is invited to attend Hogwarts School of
+                Witchcraft and Wizardry, where he learns about his magical heritage and makes friends like Ron and
+                Hermione. At Hogwarts, Harry uncovers the mystery surrounding the Sorcerer's Stone, a powerful object
+                capable of granting immortality. With his friends, he navigates challenges, including facing a
+                three-headed dog, battling a deadly plant, and outsmarting enchanted chess pieces. They eventually
+                confront the treacherous Professor Quirrell and thwart his attempt to steal the Stone for the dark
+                wizard Lord Voldemort. The novel delves into themes of friendship, bravery, and the eternal struggle
+                between good and evil, setting the stage for Harry's remarkable adventures in the wizarding world.
+            </p>
+        </div>
+    </section>
+    <!--End About book-->
+
+    <!--price details-->
+    <div style="background-color: whitesmoke; width: 90%; margin: auto;">
+        <div class="displayGreetMessage"></div>
+        <h2 style="text-align: center; margin-top: 20px;">Details</h2>
+        <div class="totalprice" id="orderrDetails" style="font-size: 25px; text-align: center;"></div>
+        <form action="/" method="GET" id="form">
+            <div class="displayErrorMessage" style="color: red; text-align: center;"></div>
+            <div class="flexDetails">
+                <div class="details">
+                    <div>
+                        <label for="fname">First Name</label><br>
+                        <input type="text" name="fname" id="Firstname" placeholder="firstname"><br>
+                    </div>
+                    <div>
+                        <label for="lname">Last Name</label><br>
+                        <input type="text" name="lname" id="Lastname" placeholder="lastname"><br>
+                    </div>
+                    <div>
+                        <label for="phno">Phone</label><br>
+                        <input type="tel" name="phno" id="Phonenumber" placeholder="phone"><br>
+                    </div>
+                </div>
+                <div class="paymentOption">
+                    <div>
+                        <label for="aboutpay">Payment Method</label><br>
+                        <input type="radio" name="aboutpay" id="aboutPay1">CoD
+                        <input type="radio" name="aboutpay" id="aboutPay2">UPI
+                    </div>
+                </div>
+            </div>
+            <div class="confirm-btn-div">
+                <button type="submit" class="confirm-btn">Confirm Order</button>
+            </div>
+        </form>
+    </div>
+    <!--End price details-->
+
+    <script src="script.js"></script>
+</body>
+
+</html>
